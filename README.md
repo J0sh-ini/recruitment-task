@@ -4,8 +4,9 @@
 2. **Take a new branch with your name from the `main` branch**
 3. **Run the Vite React app**
 4. **There is a bug, debug it and commit a fix**
-5. **Push the fix**
-6. **Create a pull request from your branch to the `main` branch**
+5. **For this example, mail = hello@gmail.com, password = true is a valid credential**
+6. **Push the fix**
+7. **Create a pull request from your branch to the `main` branch**
 
 ---
 
@@ -16,12 +17,19 @@
 git clone https://github.com/<your-username>/recruitment-task.git
 cd recruitment-task
 git checkout -b <your-name>
+cd testapp-backend
 npm install
 npm run dev
+
+cd testapp-frontend
+npm install
+npm run dev
+
 # Debug, fix, commit, and push
 git add .
 git commit -m "fix: describe your fix"
 git push origin <your-branch>
+
 # Then create a pull request on GitHub
 ```
 

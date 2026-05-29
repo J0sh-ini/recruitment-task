@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import '../styles/Login.css';
 
-function Login({ setMail, setPassword, mail, password, onSubmit }) {
-  const [loggedIn, setLoggedIn] = useState(false);
+function Login({ setMail, setPassword, mail, password, status, onSubmit }) {
   const [passwordd, setPasswordd] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setLoggedIn(true);
     onSubmit(mail, password);
   };
 
@@ -37,9 +35,9 @@ function Login({ setMail, setPassword, mail, password, onSubmit }) {
             />
           </div>
           <button className="login-btn" type="submit">Log In</button>
-          {loggedIn && (
-            <div className="alert" style={{ color: 'green', backgroundColor: '#e6ffe6', marginTop: '1rem' }}>
-              Request logged in console
+          {status && (
+            <div className="alert" style={{ color: 'white', backgroundColor: '#000000', marginTop: '1rem', fontWeight: 'bold' }}>
+              {status}
             </div>
           )}
         </form>
