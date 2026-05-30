@@ -29,8 +29,8 @@ function Login({ setMail, setPassword, mail, password, status, onSubmit }) {
             <input
               className="form-control"
               type="password"
-              value={passwordd}
-              onChange={e => setPasswordd(e.target.value)}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
               required
             />
           </div>
